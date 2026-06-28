@@ -9,7 +9,7 @@ data/skeptic_scout_*.md
 data/proof_*.json
 
 # 시크릿 — 절대 커밋 금지
-.env
+# (.env는 키를 비운 템플릿으로 의도적으로 커밋함 — 실제 키는 절대 넣고 커밋하지 말 것)
 *.key
 data/testnet_wallet.json
 
