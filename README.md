@@ -13,7 +13,7 @@ type examples\SPCXx_demo_memo.md                                # the canonical 
 
 What you should see: a skeptical SPCXx memo (`발행 30,000 / 실유통 <1% / wash 의심 …`); three PASS lines for the proof check (hash, signer, on-chain calldata); and the full four-section memo with its `Onchain proof: 0x…` link.
 
-No API key is needed. The research engine uses only the Python standard library; `eth-account` is required only for proof verification and re-anchoring. The first command does an incremental update on the cached SPCXx history.
+No API key is needed. The research engine uses only the Python standard library; `eth-account` is required only for proof verification and re-anchoring. On a fresh clone the first command builds the SPCXx Transfer cache from Mantle RPC (later runs only fetch new blocks).
 
 ## How it reads data
 
