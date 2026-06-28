@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.pyc
+
+# 런타임 캐시/상태 (재현 가능, 커밋 불필요)
+data/transfers_*.json
+data/scout_state.json
+data/skeptic_scout_*.md
+data/proof_*.json
+
+# 시크릿 — 절대 커밋 금지
+.env
+*.key
+data/testnet_wallet.json
+
+# 발표용 로컬 전용 (제출 제외)
+docs/PRESENTATION_ko.md
