@@ -1,0 +1,37 @@
+# Runtime-facing metadata for the Skeptic Scout skill (mantle-skills convention).
+# The execution environment consumes this; the human/agent contract lives in SKILL.md.
+name: skeptic-scout
+description: >
+  Skeptical, evidence-bound on-chain research agent for Mantle RWA tokenized
+  equities. Reads Mantle on-chain state, separates issuer treasury from real
+  float, and emits a four-section skeptic memo with an on-chain proof.
+version: 0.1.0
+
+# Model is configurable (see .env / config.py). Left blank so the runtime/user
+# chooses; the skill is provider-agnostic (Anthropic or OpenAI).
+model: ""
+
+primary_workflow: skeptical-rwa-memo
+chain:
+  name: mantle
+  chain_id: 5000
+  rpc: https://rpc.mantle.xyz
+
+entrypoints:
+  generate: "python scout/agent.py --asset SPCXx --force"
+  verify: "python scout/proof.py --verify examples/SPCXx_demo_proof.json"
+
+inputs:
+  - name: asset
+    description: Registered xStock name from assets/xstocks.json (e.g. SPCXx, TSLAx)
+  - name: token
+    description: Any Mantle ERC-20 address (0x…); deploy block auto-detected
+
+outputs:
+  - markdown_memo
+  - proof_bundle   # canonical payload + keccak hash + EIP-191 signature + on-chain tx
+
+guardrails:
+  - never_invent_numbers
+  - evidence_over_verdict
+  - honest_integration_status

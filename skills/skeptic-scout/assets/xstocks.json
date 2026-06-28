@@ -1,0 +1,77 @@
+{
+  "chain": {
+    "name": "mantle",
+    "chain_id": 5000,
+    "rpc": "https://rpc.mantle.xyz",
+    "explorer": "https://mantlescan.xyz"
+  },
+  "note": "Mantle xStocks tokenized-equity lineup. Addresses verified on-chain via RPC (code + symbol).",
+  "assets": {
+    "SPCXx": {
+      "symbol": "SPCXx",
+      "name": "SpaceX xStock",
+      "address": "0x68fa48b1c2fe52b3d776e1953e0e782b5044ce28",
+      "deploy_block": 96096100
+    },
+    "TSLAx": {
+      "symbol": "TSLAx",
+      "name": "Tesla xStock",
+      "address": "0x8ad3c73f833d3f9a523ab01476625f269aeb7cf0",
+      "deploy_block": 88102283
+    },
+    "NVDAx": {
+      "symbol": "NVDAx",
+      "name": "NVIDIA xStock",
+      "address": "0xc845b2894dbddd03858fd2d643b4ef725fe0849d",
+      "deploy_block": 88102138
+    },
+    "AAPLx": {
+      "symbol": "AAPLx",
+      "name": "Apple xStock",
+      "address": "0x9d275685dc284c8eb1c79f6aba7a63dc75ec890a",
+      "deploy_block": 88102033
+    },
+    "METAx": {
+      "symbol": "METAx",
+      "name": "Meta xStock",
+      "address": "0x96702be57cd9777f835117a809c7124fe4ec989a",
+      "deploy_block": 88102209
+    },
+    "GOOGLx": {
+      "symbol": "GOOGLx",
+      "name": "Alphabet xStock",
+      "address": "0xe92f673ca36c5e2efd2de7628f815f84807e803f",
+      "deploy_block": 88102231
+    },
+    "MSTRx": {
+      "symbol": "MSTRx",
+      "name": "MicroStrategy xStock",
+      "address": "0xae2f842ef90c0d5213259ab82639d5bbf649b08e",
+      "deploy_block": 88103555
+    },
+    "HOODx": {
+      "symbol": "HOODx",
+      "name": "Robinhood xStock",
+      "address": "0xe1385fdd5ffb10081cd52c56584f25efa9084015",
+      "deploy_block": 88103624
+    },
+    "SPYx": {
+      "symbol": "SPYx",
+      "name": "SP500 xStock (ETF)",
+      "address": "0x90a2a4c76b5d8c0bc892a69ea28aa775a8f2dd48",
+      "deploy_block": 88104054
+    },
+    "QQQx": {
+      "symbol": "QQQx",
+      "name": "Nasdaq xStock (ETF)",
+      "address": "0xa753a7395cae905cd615da0b82a53e0560f250af",
+      "deploy_block": 88104079
+    },
+    "CRCLx": {
+      "symbol": "CRCLx",
+      "name": "Circle xStock",
+      "address": "0xfebded1b0986a8ee107f5ab1a1c5a813491deceb",
+      "deploy_block": 88103980
+    }
+  }
+}

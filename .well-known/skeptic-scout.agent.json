@@ -1,0 +1,45 @@
+{
+  "schema": "erc-8004-draft",
+  "name": "Skeptic Scout",
+  "subtitle": "Proof-of-Analysis Research Agent for Mantle RWA",
+  "description": "An event-driven research agent that reads Mantle RWA on-chain data and emits skeptical analyst memos instead of hype summaries.",
+  "chainId": 5000,
+  "home": "https://mantle.xyz",
+  "targets": [
+    {
+      "symbol": "SPCXx",
+      "name": "SpaceX xStock",
+      "address": "0x68fa48b1c2fe52b3d776e1953e0e782b5044ce28"
+    }
+  ],
+  "skills": [
+    "mantle-rpc-read",
+    "holder-concentration-analysis",
+    "wash-trade-heuristics",
+    "skeptical-rwa-memo"
+  ],
+  "outputs": [
+    "markdown"
+  ],
+  "validation": {
+    "method": "proof-of-analysis",
+    "claims": [
+      "Every memo must cite block number and contract address.",
+      "Every memo must include Bear case, Wash trade suspicion, Who benefits, and Counter-narrative.",
+      "All numeric claims must come from an on-chain snapshot or be labeled unavailable."
+    ]
+  },
+  "payments": {
+    "protocol": "x402",
+    "freePreview": [
+      "trigger",
+      "headline",
+      "thesis"
+    ],
+    "paidContent": [
+      "full memo",
+      "address evidence",
+      "historical snapshots"
+    ]
+  }
+}

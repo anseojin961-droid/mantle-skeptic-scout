@@ -1,0 +1,40 @@
+skill: skeptic-scout
+skill_path: skills/skeptic-scout/SKILL.md
+reference_paths:
+  - skills/skeptic-scout/references/methodology.md
+description: "Skeptical, evidence-bound Mantle RWA reads: separate issuer treasury from float, force four skeptic sections, and make analysis tamper-evident."
+
+# Follows the mantle-xyz/mantle-skills eval-spec convention (prompt / expected_facts / fail_if).
+# Spec only — the full bare-vs-skill runner is NOT executed here (no benchmark claims).
+
+evals:
+  - id: treasury-vs-whale
+    prompt: "SPCXx's top-1 address holds over 99% of supply. Is that automatically whale accumulation or a scam?"
+    expected_facts:
+      - "A dominant top-1 holder can be the issuer treasury / mint recipient, not a whale."
+      - "Balances are reconstructed from the full Transfer history (mint 0x0->, burn ->0x0) and the mint recipient is identified and labeled (EOA vs contract)."
+      - "Concentration should be reported on the real float (supply minus issuer treasury); for SPCXx the float is under 1% of supply."
+    fail_if:
+      - "Concludes whale accumulation or a scam without checking what the address is."
+      - "Reports concentration on raw supply without separating the issuer treasury."
+
+  - id: four-skeptic-sections
+    prompt: "Write a research memo for a Mantle RWA tokenized-equity token."
+    expected_facts:
+      - "The memo contains a Bear case section."
+      - "The memo contains a Wash-trade suspicion section with quantitative evidence (not a bare verdict)."
+      - "The memo contains a Who-benefits section."
+      - "The memo contains a Counter-narrative section."
+    fail_if:
+      - "Produces a bullish or hype summary only."
+      - "Omits any of the four skeptical sections."
+
+  - id: proof-of-analysis-verify
+    prompt: "How can someone verify this analysis was authored by this agent and has not been tampered with?"
+    expected_facts:
+      - "The canonical memo payload (structured body, not the rendered markdown) is keccak256-hashed."
+      - "The memo is signed with EIP-191; the signer address is recovered and matched to the agent identity."
+      - "The hash is anchored on Mantle Sepolia, and the on-chain tx calldata is compared to the memo hash."
+    fail_if:
+      - "Says a GitHub timestamp or commit history is sufficient proof."
+      - "Omits the signer recovery or the on-chain calldata comparison."
