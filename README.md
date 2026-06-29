@@ -78,6 +78,8 @@ python scout\agent.py --force --recent
 - 서명에서 에이전트 주소를 복원해 작성자가 맞는지 확인합니다.
 - Mantle Sepolia에 기록된 tx calldata가 메모 해시와 같은지 확인합니다.
 
+`examples/SPCXx_demo_proof.json`은 제출용으로 고정해 둔 증명이고, 그 signer 주소는 이미 온체인에 기록된 데모 지갑입니다. 직접 `--anchor`로 새 메모를 기록하면 각자 환경의 테스트넷 지갑(자동 생성)으로 **새 proof bundle**이 만들어지며, signer 주소는 달라집니다. 검증은 개인키 없이 공개 정보(서명·주소·온체인 tx)만으로 되므로, 예시 증명은 그대로 누구나 검증할 수 있습니다.
+
 ## 왜 만들었나
 
 대부분의 온체인 봇은 좋은 소식을 더 크게 말합니다. TVL이 올랐다, 거래량이 늘었다, bullish하다는 식입니다.
