@@ -34,8 +34,10 @@ python scout\agent.py --force
 처음 실행하면 Mantle RPC에서 Transfer 히스토리를 읽어 `data/` 캐시를 만듭니다(몇십 초 걸릴 수 있고, `스캔 N/M 청크` 진행 표시가 뜹니다). 끝나면 이런 요약이 나오고, 전체 메모가 `data/skeptic_scout_SPCXx_<블록번호>.md`로 저장됩니다.
 
 ```text
-SPCXx(SpaceX xStock): 발행 30,000 / 실유통 1% 미만 / 홀더 20여 명 / wash의심 ...
+SPCXx(SpaceX xStock): 발행 30,000 / 실유통 0.7% / 홀더 26명 / wash의심 94/100
 ```
+
+실유통은 발행량의 1% 미만입니다. 라이브 데이터라 실행 시점에 따라 숫자는 조금씩 달라집니다.
 
 ### 3. 증명 검증
 
