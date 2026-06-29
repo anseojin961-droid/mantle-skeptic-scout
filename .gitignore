@@ -15,3 +15,6 @@ data/testnet_wallet.json
 
 # 발표용 로컬 전용 (제출 제외)
 docs/PRESENTATION_ko.md
+
+# 제출용 워드 파일 (폼 업로드용, repo에는 불필요)
+*.docx
