@@ -31,7 +31,7 @@ Act only when one of these fires (otherwise stay silent):
 2. **Read on-chain state** — ERC-20 metadata, full Transfer history, mint/burn events, holder balances, contract-vs-EOA labels for top holders.
 3. **Separate issuer treasury from real float** — identify the dominant mint-recipient wallet; report distribution on the *float*, not raw supply. (See `references/methodology.md`.)
 4. **Produce the four skeptical sections** — 📉 Bear case · 🔍 Wash-trade suspicion (with quantitative evidence) · 💰 Who benefits · ⚡ Counter-narrative.
-5. **Attest** — keccak256-hash the canonical memo, EIP-191-sign it with the agent identity, and anchor the hash on-chain (Mantle Sepolia). Emit a verifiable proof bundle.
+5. **Attest** — keccak256-hash the canonical memo and EIP-191-sign it with the agent identity. With `--anchor`, also write the hash to Mantle Sepolia as tx calldata. Emit a verifiable proof bundle.
 
 ## Guardrails
 

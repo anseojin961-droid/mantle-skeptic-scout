@@ -32,5 +32,5 @@ Contextualize: note how little the treasury participates, so the churn is read a
 
 - Hash the **canonical memo payload** (structured body, not rendered markdown) with keccak256.
 - Sign with the agent's stable Ethereum identity (EIP-191).
-- Anchor the hash on Mantle Sepolia as tx calldata.
+- With `--anchor`, write the hash to Mantle Sepolia as tx calldata (the example bundle is pre-anchored).
 - Anyone verifies with `proof.py --verify`: hash re-computation, signer recovery, on-chain calldata match.
